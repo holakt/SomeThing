@@ -24,7 +24,7 @@ import java.util.Scanner;
  * 提示
  * 递归、递推
  * <p>
- * 来源
+ * 来源http://119.23.214.227/problem.php?id=1218
  */
 public class Denglouti {
     public static void main(String[] args) {
