@@ -1,6 +1,5 @@
-package dynamic;
+package DP;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
