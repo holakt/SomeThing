@@ -19,3 +19,7 @@ public class ci_01 {
         return false;
     }
 }
+/***
+ * https://blog.nowcoder.net/n/80aebb982e8748bba445196ff3bf5dbe的方法很不错
+ * 我的算是暴力查找了
+ */
