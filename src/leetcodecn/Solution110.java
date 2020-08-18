@@ -43,8 +43,12 @@ package leetcodecn;
  * TreeNode right;
  * TreeNode(int x) { val = x; }
  * }
+ * <p>
+ * 数据结构
+ * <p>
+ * 数据结构
  */
-
+/*
 public class Solution110 {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
@@ -75,7 +79,11 @@ public class Solution110 {
         return Math.max(left + 1, right + 1);
     }
 }
-
+*/
+/**
+ * 数据结构
+ */
+/*
 class TreeNode {
     int val;
     TreeNode left;
@@ -85,3 +93,4 @@ class TreeNode {
         val = x;
     }
 }
+*/

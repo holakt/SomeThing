@@ -5,7 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// Definition for a Node.
+/**
+ * 数据结构
+ */
+/*
 class Node {
     public int val;
     public List<Node> neighbors;
@@ -25,7 +28,9 @@ class Node {
         neighbors = _neighbors;
     }
 }
+*/
 
+/*
 
 public class Solution133 {
     Map<Integer, Node> map = new HashMap<>();
@@ -66,6 +71,8 @@ public class Solution133 {
 //        new Solution133().cloneGraph(n1);
 //    }
 }
+*/
+
 /*
 给你无向连通图中一个节点的引用，请你返回该图的深拷贝（克隆）。
 
