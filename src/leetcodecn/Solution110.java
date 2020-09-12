@@ -35,6 +35,7 @@ package leetcodecn;
 链接：https://leetcode-cn.com/problems/balanced-binary-tree
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -48,8 +49,8 @@ package leetcodecn;
  * <p>
  * 数据结构
  */
-/*
 public class Solution110 {
+/*
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
         root.left = new TreeNode(9);
@@ -78,8 +79,8 @@ public class Solution110 {
         }
         return Math.max(left + 1, right + 1);
     }
-}
 */
+}
 /**
  * 数据结构
  */
