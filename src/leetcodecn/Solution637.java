@@ -33,10 +33,9 @@ public class Solution637 {
         while (queue.size() > 0) {
             int size = queue.size();
             int i = size;
-            Long sum = null;
+            long sum = 0;
             while (size-- > 0) {
                 TreeNode treeNode = queue.poll();
-                sum = sum == null ? 0 : sum;
                 sum += treeNode.val;
                 if (treeNode.left != null)
                     queue.add(treeNode.left);
