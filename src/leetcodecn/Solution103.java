@@ -1,6 +1,6 @@
 package leetcodecn;
 
-import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -56,29 +56,29 @@ public class Solution103 {
 //        new Solution103().zigzagLevelOrder(root);
 //    }
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        ArrayList<List<Integer>> lists = new ArrayList<>(new ArrayList<>());
+        List<List<Integer>> ans = new LinkedList<>();
         if (root == null) {
-            return lists;
+            return ans;
         }
-        queue.offer(root);
-        int deep = 0;
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            List<Integer> list = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                TreeNode now = queue.poll();
-                if (deep % 2 == 0) list.add(now.val);
-                else list.add(0, now.val);
-                if (now.left != null) queue.add(now.left);
-                if (now.right != null) queue.add(now.right);
-            }
-            deep++;
-            lists.add(list);
-        }
-        return lists;
-    }
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        nodeQueue.offer(root);
+        boolean isOrderLeft = true;
 
+        while (!nodeQueue.isEmpty()) {
+            Deque<Integer> levelList = new LinkedList<>();
+            int size = nodeQueue.size();
+            for (int i = 0; i < size; ++i) {
+                TreeNode curNode = nodeQueue.poll();
+                if (isOrderLeft) levelList.offerLast(curNode.val);
+                else levelList.offerFirst(curNode.val);
+                if (curNode.left != null) nodeQueue.offer(curNode.left);
+                if (curNode.right != null) nodeQueue.offer(curNode.right);
+            }
+            ans.add(new LinkedList<>(levelList));
+            isOrderLeft = !isOrderLeft;
+        }
+        return ans;
+    }
 }
 
 class TreeNode {
