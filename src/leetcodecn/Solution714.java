@@ -34,14 +34,17 @@ package leetcodecn;
  */
 public class Solution714 {
     public int maxProfit(int[] prices, int fee) {
-        int days = prices.length;
-        int[][] dp = new int[days][2];
-        dp[0][0] = 0;
-        dp[0][1] = -prices[0];
-        for (int i = 1; i < days; i++) {
-            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee);
-            dp[i][1] = Math.max(dp[i - 1][0] - prices[i], dp[i - 1][1]);
+        int n = prices.length;
+        int buy = prices[0];
+        int profit = 0;
+        for (int i = 1; i < n; i++) {
+            if (prices[i] < buy) {
+                buy = prices[i];
+            } else if (prices[i] - fee > buy) {
+                profit += prices[i] - buy - fee;
+                buy = prices[i] - fee;
+            }
         }
-        return Math.max(dp[days - 1][0], dp[days - 1][1]);
+        return profit;
     }
 }
