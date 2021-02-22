@@ -45,6 +45,15 @@ package leetcodecn;
  * 链接：https://leetcode-cn.com/problems/toeplitz-matrix
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
+ * 进阶问题
+ * 对于进阶问题一，一次最多只能将矩阵的一行加载到内存中，我们将每一行复制到一个连续数组中，随后在读取下一行时，就与内存中此前保存的数组进行比较。
+ *
+ * 对于进阶问题二，一次只能将不完整的一行加载到内存中，我们将整个矩阵竖直切分成若干子矩阵，并保证两个相邻的矩阵至少有一列或一行是重合的，然后判断每个子矩阵是否符合要求。
+ *
+ * 作者：LeetCode-Solution
+ * 链接：https://leetcode-cn.com/problems/toeplitz-matrix/solution/tuo-pu-li-ci-ju-zhen-by-leetcode-solutio-57bb/
+ * 来源：力扣（LeetCode）
+ * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  * @author holate
  * @date 2021/2/22
  */
