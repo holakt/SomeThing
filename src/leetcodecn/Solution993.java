@@ -5,7 +5,7 @@ package leetcodecn;
  * @date 2021/5/17
  */
 public class Solution993 {
-    public int deepNode(TreeNode root, int n, int deep) {
+/*    public int deepNode(TreeNode root, int n, int deep) {
         if (root != null) {
             if (root.val == n) {
                 return deep;
@@ -31,9 +31,10 @@ public class Solution993 {
 
     public boolean isCousins(TreeNode root, int x, int y) {
         return deepNode(root, x, 0) == deepNode(root, y, 0) && fatherNodeVal(root, x, y);
-    }
+    }*/
 }
 
+/*
 class TreeNode {
     int val;
     TreeNode left;
@@ -52,3 +53,4 @@ class TreeNode {
         this.right = right;
     }
 }
+*/
