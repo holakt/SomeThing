@@ -1,10 +1,5 @@
 package leetcodecn;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 /**
  * 给定一个二叉树，返回其节点值的锯齿形层序遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。
  * <p>
@@ -55,7 +50,7 @@ public class Solution103 {
 //        r2.right = r22;
 //        new Solution103().zigzagLevelOrder(root);
 //    }
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+/*    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> ans = new LinkedList<>();
         if (root == null) {
             return ans;
@@ -78,9 +73,10 @@ public class Solution103 {
             isOrderLeft = !isOrderLeft;
         }
         return ans;
-    }
+    }*/
 }
 
+/*
 class TreeNode {
     int val;
     TreeNode left;
@@ -89,4 +85,4 @@ class TreeNode {
     TreeNode(int x) {
         val = x;
     }
-}
+}*/
