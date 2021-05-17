@@ -5,23 +5,17 @@ package leetcodecn;
  * @date 2021/5/17
  */
 public class Solution1863 {
-    static int ret = 0;
-
-    public int subsetXORSum(int[] nums) {
-        ret = 0;
-        if (nums == null || nums.length == 0) {
-            return ret;
+    int subsetXORSum(int[] nums) {
+        int n = nums.length;
+        int ans = 0;
+        for (int msk = 0; msk < ((1 << n)); msk++) {
+            int x = 0;
+            for (int i = 0; i < n; i++) {
+                if (((msk >> i) & 1) == 1)
+                    x ^= nums[i];
+            }
+            ans += x;
         }
-        f(0, nums, 0);
-        return ret;
-    }
-
-    public void f(int cur, int nums[], int k) {
-        for (int i = k; i < nums.length; i++) {
-            cur ^= nums[i];
-            ret += cur;
-            f(cur, nums, i + 1);
-            cur ^= nums[i];
-        }
+        return ans;
     }
 }
