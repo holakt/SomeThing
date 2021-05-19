@@ -8,6 +8,18 @@ package algorithms;
  * @date 2021/5/19
  */
 public class QuickSelector {
+    public static void main(String[] args) {
+        QuickSelector selectorRandom = new QuickSelector();
+        int n = 10;
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = i;
+        }
+        for (int i = 1; i <= n; i++) {
+            int ret = selectorRandom.select(arr, i);
+            System.out.println(ret);
+        }
+    }
 
     public int select(int[] arr, int k) {
         return quickSelect(arr, 0, arr.length - 1, k);
@@ -17,10 +29,10 @@ public class QuickSelector {
         // 返回坐标index
         int index = partition(arr, from, to);
         //index就是第k大的元素
-        if (index - from == k) {
+        if (index - from + 1 == k) {
             return arr[index];
             // index 在后半段
-        } else if (index - from > k) {
+        } else if (index - from + 1 > k) {
             return quickSelect(arr, from, index - 1, k);
             // index 在前半段
         } else {
@@ -32,13 +44,11 @@ public class QuickSelector {
         int pivot = arr[from];
         int i = from + 1, j = to;
         while (i <= j) {
-            while (i <= j && arr[i] <= pivot) {
+            if (arr[i] <= pivot) {
                 i++;
-            }
-            while (i <= j && arr[j] >= pivot) {
+            } else if (arr[j] >= pivot) {
                 j--;
-            }
-            if (i <= j) {
+            } else {
                 swap(arr, i, j);
             }
         }
