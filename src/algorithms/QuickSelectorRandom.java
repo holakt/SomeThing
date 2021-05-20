@@ -26,7 +26,6 @@ public class QuickSelectorRandom {
         int randomVal = (int) (left + Math.random() * (right - left + 1));
         int pivot = arr[randomVal];
         int i = left, j = right;
-        swap(arr, randomVal, j);
         while (i <= j) {
             if (arr[i] <= pivot) {
                 i++;
@@ -36,6 +35,7 @@ public class QuickSelectorRandom {
                 swap(arr, i, j);
             }
         }
+        swap(arr, randomVal, j);
 
         if (i - left == k) {
             return arr[j];
